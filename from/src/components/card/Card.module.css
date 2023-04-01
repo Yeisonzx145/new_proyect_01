@@ -1,0 +1,55 @@
+.myDiv{
+    width: 20%;
+    height: 25em; 
+    background-color: black;
+    border-radius: 2em;
+    padding-top : 5px;
+    padding-bottom: 5px;
+    padding: auto;
+    position: relative;
+      
+}
+.imagenes{
+    width: 95%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    margin-top: 10%;
+}
+.cierre{
+    position: absolute;
+    right: 5%;
+    border-radius: 0.5em;
+    background-color: #FCDE37;
+}
+.divNombre{
+    background-color: #FCDE37;
+    position: absolute;
+    top: 2.5%;
+    left: 2%;
+    border-radius: 0.5em;
+    width: 70%;
+    height: 8%;
+    border: 0.3em solid #f5dc51;
+}
+.divDescripcion{
+    background-color: #FCDE37;
+    width: 95%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    margin-top: 5%;
+    border-radius: 2em;
+   
+    
+}
+.title{
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    font-family: Elephant;
+    color: black;
+    font-size: 1.2em;
+}
+.letras{
+    color:white;
+
+}
