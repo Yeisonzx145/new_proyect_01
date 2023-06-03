@@ -2,19 +2,19 @@ import Nav from './components/Nav/Nav.jsx'
 import Cards from './components/cars/Cards.jsx'
 import About from './components/views/About';
 import Detail from './components/views/Detail.jsx'
-import Form from './components/views/Form.jsx';
+import Form from './components/form/Form.jsx';
 import './App.css'
-import { Routes,Route } from 'react-router-dom';
+import { Routes,Route, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
 function App () {
   const [characters,setCharacters] = useState([]);
   
   const onSearch = (character) =>{
-    const URL_BASE = "http://localhost:3001/rickandmorty/onsearch/";
+    const URL_BASE = "http://localhost:3001";
    
     
-    fetch(`${URL_BASE}/character/${character}`)
+    fetch(`${URL_BASE}/onsearch/${character}`)
     .then((response) => response.json())
     .then((data) => {
       if(data.name){
@@ -27,12 +27,13 @@ function App () {
   const onClose = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   }
-
+  const {pathname} = useLocation();
+  
   return(
     <div className='App' style={{ padding: '25px' }}>
 
       <div>
-        <Nav onSearch={onSearch}/>
+        {pathname !== '/' && <Nav onSearch={onSearch}/>}
       </div>
       
       <Routes>

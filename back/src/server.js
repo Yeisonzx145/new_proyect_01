@@ -1,12 +1,18 @@
 const express = require('express');
-const server = express();
-const router = require('./routes/router')
+const router = require('./routes')
 const cors = require("cors");
 
+const PORT = 3001;
+
+const server = express();
 server.use(express.json());
 server.use(cors());
 
-server.use('/', router);
+server.use('/',router);
+
+server.listen(PORT,()=>{
+    console.log('Empeso el server');
+});
 
 module.exports = server;
 
